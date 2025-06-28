@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Use navigate hook from react-router-dom
-import axios from 'axios'; // Import axios to send HTTP requests
+import { Link, useNavigate } from 'react-router-dom'; 
+import axios from 'axios'; 
 import '../styles/adminLogin.css';
 
 const LoginPage = () => {
@@ -8,9 +8,9 @@ const LoginPage = () => {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [successMessage, setSuccessMessage] = useState("");
-    const navigate = useNavigate(); // To navigate after success
+    const navigate = useNavigate(); 
   
-    // Function to handle form submission
+    
     async function handleLogin(e) {
         e.preventDefault();
 
@@ -22,11 +22,11 @@ const LoginPage = () => {
             console.log(response.data);
             setSuccessMessage("Login successful! Redirecting...");
             setTimeout(() => {
-                navigate("/dashboard"); // Redirect to Dashboard page
+                navigate("/dashboard"); 
             }, 2000);
         } catch (err) {
             setError(err.response?.data?.message || "Invalid credentials");
-            setTimeout(() => setError(""), 4000); // Clear error message after 4 seconds
+            setTimeout(() => setError(""), 4000); 
         }
     }
       

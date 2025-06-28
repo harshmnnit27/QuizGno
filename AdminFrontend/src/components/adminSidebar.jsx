@@ -3,7 +3,7 @@ import { FaHome, FaClipboardList, FaQuestionCircle, FaUsers, FaThList, FaChartLi
 import "../styles/sidebar.css";
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen] = useState(true);
 
   return (
     <aside className={`sidebar ${isOpen ? "open" : "closed"}`}>
