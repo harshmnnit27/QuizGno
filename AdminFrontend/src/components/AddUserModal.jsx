@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios'; // Import axios
-import '../styles/modal.css'; // Ensure to style this modal in a separate file
+import axios from 'axios'; 
+import '../styles/modal.css';
 
 const AddUserModal = ({ setShowModal, fetchUsers }) => {
   const [userData, setUserData] = useState({
@@ -19,15 +19,15 @@ const AddUserModal = ({ setShowModal, fetchUsers }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log('Submitting user data:', userData); // Log the form data
+    console.log('Submitting user data:', userData); 
 
     try {
       const response = await axios.post('http://localhost:4000/api/add-user', userData);
 
       console.log('User added successfully:', response.data);
 
-      fetchUsers(); // Refresh the user list
-      setShowModal(false); // Close modal after submitting
+      fetchUsers(); 
+      setShowModal(false); 
     } catch (error) {
       console.error('Error during user submission:', error);
     }

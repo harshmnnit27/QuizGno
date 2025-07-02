@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/adminHeader.css";
 
 
-const AdminHeader = ({ toggleSidebar }) => {
+const AdminHeader = () => {
   return (
     <header className="admin-header">
       <div className="logo">
